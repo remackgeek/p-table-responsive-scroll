@@ -28,6 +28,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -93,6 +96,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -121,6 +127,41 @@
             "production": {
               "devServerTarget": "p-table-responsive-scroll-app:serve:production"
             }
+          }
+        }
+      }
+    },
+    "p-table-responsive-scroll": {
+      "projectType": "library",
+      "root": "projects/p-table-responsive-scroll",
+      "sourceRoot": "projects/p-table-responsive-scroll/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/p-table-responsive-scroll/tsconfig.lib.json",
+            "project": "projects/p-table-responsive-scroll/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/p-table-responsive-scroll/src/test.ts",
+            "tsConfig": "projects/p-table-responsive-scroll/tsconfig.spec.json",
+            "karmaConfig": "projects/p-table-responsive-scroll/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/p-table-responsive-scroll/tsconfig.lib.json",
+              "projects/p-table-responsive-scroll/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

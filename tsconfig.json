@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "p-table-responsive-scroll": [
+        "dist/p-table-responsive-scroll"
+      ],
+      "p-table-responsive-scroll/*": [
+        "dist/p-table-responsive-scroll/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

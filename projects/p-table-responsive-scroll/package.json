@@ -1,0 +1,9 @@
+{
+  "name": "p-table-responsive-scroll",
+  "version": "0.0.1-beta1",
+  "peerDependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0",
+    "primeng": "^8.0.0"
+  }
+}
