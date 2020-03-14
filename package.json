@@ -14,7 +14,9 @@
     "build:app": "ng build --prod p-table-responsive-scroll-app",
     "test:app": "ng test p-table-responsive-scroll-app --watch=false",
     "test:lib": "ng test p-table-responsive-scroll --watch=false",
-    "test:e2e": "ng e2e"
+    "test:e2e": "ng e2e",
+    "build:stats": "ng build --stats-json",
+    "analyze": "webpack-bundle-analyzer dist/p-table-responsive-scroll-app/stats-es2015.json"
   },
   "private": true,
   "dependencies": {
@@ -55,6 +57,7 @@
     "ts-node": "~7.0.0",
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack-bundle-analyzer": "^3.6.1"
   }
 }
