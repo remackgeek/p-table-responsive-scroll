@@ -34,6 +34,9 @@ export class ResponsiveScrollDirective implements OnInit, AfterViewInit {
     } else {
       this.table.scrollHeight += ' ';
     }
-    setTimeout(() => {}, 1);
+    // HACK: force scrollbar show/hide recalc
+    setTimeout(() => {
+      this.table.tableService.onValueChange(this.table._value);
+    }, 1);
   }
 }
