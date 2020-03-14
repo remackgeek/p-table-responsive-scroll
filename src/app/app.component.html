@@ -1,25 +1,41 @@
-<h3>Virtual Scroll - 250K Rows</h3>
-<p-table [columns]="cols" [value]="virtualCars" [scrollable]="true" [rows]="20" scrollHeight="200px" [virtualScroll]="true" (onLazyLoad)="loadDataOnScroll($event)"
-    [lazy]="true" [totalRecords]="totalRecords" [virtualRowHeight]="34">
-    <ng-template pTemplate="header" let-columns>
+<div style="display:flex;flex-direction: column;position: absolute;top:0;bottom:0;left:0;right:0;background-color: lightgreen;">
+  <h3>Virtual Scroll - 250K Rows</h3>
+  <div style="flex:1;background-color: lightgoldenrodyellow;overflow-y: hidden;">
+    <p-table
+      responsive-scrolling
+      [columns]="cols"
+      [value]="virtualCars"
+      [scrollable]="true"
+      [rows]="40"
+      scrollHeight="100%"
+      [virtualScroll]="true"
+      (onLazyLoad)="loadDataOnScroll($event)"
+      [lazy]="true"
+      [totalRecords]="totalRecords"
+      [virtualRowHeight]="34"
+      [virtualScrollDelay]="1"
+    >
+      <ng-template pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of columns">
-                {{col.header}}
-            </th>
+          <th *ngFor="let col of columns">
+            {{ col.header }}
+          </th>
         </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
         <tr style="height:34px">
-            <td *ngFor="let col of columns">
-                {{rowData[col.field]}}
-            </td>
+          <td *ngFor="let col of columns">
+            {{ rowData[col.field] }}
+          </td>
         </tr>
-    </ng-template>
-    <ng-template pTemplate="loadingbody" let-columns="columns">
+      </ng-template>
+      <ng-template pTemplate="loadingbody" let-columns="columns">
         <tr style="height:34px">
-            <td *ngFor="let col of columns">
-                <div class="loading-text"></div>
-            </td>
+          <td *ngFor="let col of columns">
+            <div class="loading-text"></div>
+          </td>
         </tr>
-    </ng-template>
-</p-table>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

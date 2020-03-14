@@ -4,6 +4,7 @@ import { ResponsiveScrollDirective } from './responsive-scroll.directive';
 
 @NgModule({
   declarations: [ResponsiveScrollDirective],
-  imports: [CommonModule]
+  imports: [CommonModule],
+  exports: [ResponsiveScrollDirective]
 })
 export class ResponsiveScrollModule {}
