@@ -3,5 +3,6 @@
   "dest": "../../dist/p-table-responsive-scroll",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["resize-observer-polyfill"]
 }

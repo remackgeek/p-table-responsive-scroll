@@ -31,6 +31,7 @@
     "@angular/router": "~8.2.14",
     "primeicons": "^2.0.0",
     "primeng": "^8.1.1",
+    "resize-observer-polyfill": "^1.5.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

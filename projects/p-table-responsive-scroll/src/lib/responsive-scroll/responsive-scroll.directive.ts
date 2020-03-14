@@ -1,5 +1,6 @@
-import { Directive, ElementRef, OnInit, AfterViewInit, HostListener } from '@angular/core';
+import { Directive, OnInit, AfterViewInit, NgZone } from '@angular/core';
 import { Table } from 'primeng/table';
+import ResizeObserver from 'resize-observer-polyfill';
 
 // tslint:disable-next-line: max-line-length
 // based on: https://stackoverflow.com/questions/54200024/primeng-turbotable-p-table-does-not-work-properly-with-scrollheight-100/54218853#54218853
@@ -9,12 +10,7 @@ import { Table } from 'primeng/table';
   selector: '[responsive-scrolling]'
 })
 export class ResponsiveScrollDirective implements OnInit, AfterViewInit {
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.resize();
-  }
-
-  constructor(private table: Table) {}
+  constructor(private table: Table, private readonly zone: NgZone) {}
 
   ngOnInit() {
     console.log('here I am!!!', this.table);
@@ -23,8 +19,8 @@ export class ResponsiveScrollDirective implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     // avoid "expression changed after check issue"
     setTimeout(() => {
-      this.resize();
-    }, 100);
+      new ResizeObserver(() => this.zone.run(() => this.resize())).observe(this.table.el.nativeElement.parentElement);
+    }, 10);
   }
 
   resize() {
