@@ -1,4 +1,23 @@
 <div style="display:flex;flex-direction: column;position: absolute;top:0;bottom:0;left:0;right:0;background-color: lightgreen;">
+  <h3>Short List</h3>
+  <div style="flex:1;background-color: lightgoldenrodyellow;overflow-y: hidden;">
+    <p-table responsive-scrolling [columns]="cols" [value]="shortList" [scrollable]="true" scrollHeight="100%">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns">
+            {{ col.header }}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr style="height:34px">
+          <td *ngFor="let col of columns">
+            {{ rowData[col.field] }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
   <h3>Virtual Scroll - 250K Rows</h3>
   <div style="flex:1;background-color: lightgoldenrodyellow;overflow-y: hidden;">
     <p-table
