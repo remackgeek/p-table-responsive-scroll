@@ -1,4 +1,4 @@
-import { Directive, OnInit, AfterViewInit, NgZone } from '@angular/core';
+import { Directive, AfterViewInit, NgZone } from '@angular/core';
 import { Table } from 'primeng/table';
 import ResizeObserver from 'resize-observer-polyfill';
 
@@ -9,12 +9,8 @@ import ResizeObserver from 'resize-observer-polyfill';
   // tslint:disable-next-line: directive-selector
   selector: '[responsive-scrolling]'
 })
-export class ResponsiveScrollDirective implements OnInit, AfterViewInit {
+export class ResponsiveScrollDirective implements AfterViewInit {
   constructor(private table: Table, private readonly zone: NgZone) {}
-
-  ngOnInit() {
-    console.log('here I am!!!', this.table);
-  }
 
   ngAfterViewInit() {
     // avoid "expression changed after check issue"
