@@ -1,27 +1,25 @@
-# PTableResponsiveScrollApp
+# p-table-responsive-scroll
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+This project provides a directive for a primeng p-table that allows it to work correctly when scrollHeight="100%". It is packaged as a directive and based on the solution here: [primeng TurboTable (p-table) does not work properly with scrollHeight='100%'](https://stackoverflow.com/questions/54200024/primeng-turbotable-p-table-does-not-work-properly-with-scrollheight-100)
 
-## Development server
+![license](https://img.shields.io/npm/l/p-table-responsive-scroll.svg) ![downloads](https://img.shields.io/npm/dt/p-table-responsive-scroll.svg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Usage
 
-## Code scaffolding
+install the package:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    npm install --save p-table-responsive-scroll
 
-## Build
+import the ResponsiveScrollModule into your module:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    import { ResponsiveScrollModule } from 'p-table-responsive-scroll';
 
-## Running unit tests
+    imports: [BrowserModule, TableModule, ResponsiveScrollModule]
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+use the responsive-scrolling directive in your component:
 
-## Running end-to-end tests
+    <p-table responsive-scrolling [columns]="cols" [value]="shortList" [scrollable]="true" scrollHeight="100%">
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Versions
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+use beta versions with angular Angular 8

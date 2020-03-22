@@ -1,6 +1,9 @@
 {
   "name": "p-table-responsive-scroll",
-  "version": "0.0.1-beta1",
+  "description": "An Angular directive for primeng p-table scrollHeight=100% resizing",
+  "author": "remackgeek",
+  "license": "MIT",
+  "version": "0.0.1-beta2",
   "peerDependencies": {
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0",
@@ -8,5 +11,14 @@
   },
   "dependencies": {
     "resize-observer-polyfill": "^1.5.1"
-  }
+  },
+  "repository": "github:remackgeek/p-table-responsive-scroll",
+  "homepage": "https://github.com/remackgeek/p-table-responsive-scroll",
+  "keywords": [
+    "angular",
+    "primeng",
+    "p-table",
+    "scrollHeight",
+    "resize"
+  ]
 }

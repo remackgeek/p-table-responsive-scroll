@@ -1,24 +1,25 @@
-# PTableResponsiveScroll
+# p-table-responsive-scroll
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+This project provides a directive for a primeng p-table that allows it to work correctly when scrollHeight="100%". It is packaged as a directive and based on the solution here: [primeng TurboTable (p-table) does not work properly with scrollHeight='100%'](https://stackoverflow.com/questions/54200024/primeng-turbotable-p-table-does-not-work-properly-with-scrollheight-100)
 
-## Code scaffolding
+![license](https://img.shields.io/npm/l/p-table-responsive-scroll.svg) ![downloads](https://img.shields.io/npm/dt/p-table-responsive-scroll.svg)
 
-Run `ng generate component component-name --project p-table-responsive-scroll` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project p-table-responsive-scroll`.
-> Note: Don't forget to add `--project p-table-responsive-scroll` or else it will be added to the default project in your `angular.json` file. 
+## Usage
 
-## Build
+install the package:
 
-Run `ng build p-table-responsive-scroll` to build the project. The build artifacts will be stored in the `dist/` directory.
+    npm install --save p-table-responsive-scroll
 
-## Publishing
+import the ResponsiveScrollModule into your module:
 
-After building your library with `ng build p-table-responsive-scroll`, go to the dist folder `cd dist/p-table-responsive-scroll` and run `npm publish`.
+    import { ResponsiveScrollModule } from 'p-table-responsive-scroll';
 
-## Running unit tests
+    imports: [BrowserModule, TableModule, ResponsiveScrollModule]
 
-Run `ng test p-table-responsive-scroll` to execute the unit tests via [Karma](https://karma-runner.github.io).
+use the responsive-scrolling directive in your component:
 
-## Further help
+    <p-table responsive-scrolling [columns]="cols" [value]="shortList" [scrollable]="true" scrollHeight="100%">
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Versions
+
+use beta versions with angular Angular 8
