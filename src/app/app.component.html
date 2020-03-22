@@ -1,6 +1,6 @@
 <div style="display:flex;flex-direction: column;position: absolute;top:0;bottom:0;left:0;right:0;background-color: lightgreen;">
-  <h3>Short List</h3>
-  <div style="flex:1;background-color: lightgoldenrodyellow;overflow-y: hidden;">
+  <h3 class="shortlist">Short List</h3>
+  <div class="topcontainer" style="flex:1;background-color: lightgoldenrodyellow;overflow-y: hidden;">
     <p-table responsive-scrolling [columns]="cols" [value]="shortList" [scrollable]="true" scrollHeight="100%">
       <ng-template pTemplate="header" let-columns>
         <tr>
@@ -19,7 +19,7 @@
     </p-table>
   </div>
   <h3>Virtual Scroll - 250K Rows</h3>
-  <div style="flex:1;background-color: lightgoldenrodyellow;overflow-y: hidden;">
+  <div class="bottomcontainer" style="flex:1;background-color: lightgoldenrodyellow;overflow-y: hidden;">
     <p-table
       responsive-scrolling
       [columns]="cols"
