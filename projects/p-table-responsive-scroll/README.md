@@ -22,4 +22,4 @@ use the responsive-scrolling directive in your component:
 
 ## Versions
 
-use beta versions with angular Angular 8
+use version 8.0.0 with angular Angular 8

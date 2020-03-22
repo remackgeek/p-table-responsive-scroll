@@ -3,7 +3,7 @@
   "description": "An Angular directive for primeng p-table scrollHeight=100% resizing",
   "author": "remackgeek",
   "license": "MIT",
-  "version": "0.0.1-beta2",
+  "version": "8.0.0",
   "peerDependencies": {
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0",
