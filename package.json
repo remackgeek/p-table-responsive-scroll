@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "pack:lib": "cd dist/p-table-responsive-scroll && npm pack",
     "move:lib": "rm -rf artifacts && mkdir artifacts && cp dist/p-table-responsive-scroll/*.tgz artifacts",
-    "build:lib": "ng build p-table-responsive-scroll",
+    "build:lib": "ng build p-table-responsive-scroll --prod",
     "build:app": "ng build --prod p-table-responsive-scroll-app",
     "test:app": "ng test p-table-responsive-scroll-app --watch=false",
     "test:lib": "ng test p-table-responsive-scroll --watch=false",
