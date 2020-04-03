@@ -45,7 +45,7 @@ jobs:
       - run: npm run test:app
 
       # run e2e tests!
-      run: npm run test:e2e
+      - run: npm run test:e2e
 
       # rebuild library without ngcc (Ivy) -- cause by app build in test step
       - run: npm run build:lib
