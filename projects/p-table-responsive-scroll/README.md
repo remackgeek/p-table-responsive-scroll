@@ -1,6 +1,12 @@
 # p-table-responsive-scroll
 
-This project provides a directive for a primeng p-table that allows it to work correctly when scrollHeight="100%". It is packaged as a directive and based on the solution here: [primeng TurboTable (p-table) does not work properly with scrollHeight='100%'](https://stackoverflow.com/questions/54200024/primeng-turbotable-p-table-does-not-work-properly-with-scrollheight-100)
+This project provides a directive to address this issue with the primeng p-table:
+
+[#5235 - Table (TurboTable) does not adjust scrollHeight after parent height change](https://github.com/primefaces/primeng/issues/5235)
+
+This is partially based on the solution here:
+
+[primeng TurboTable (p-table) does not work properly with scrollHeight='100%'](https://stackoverflow.com/questions/54200024/primeng-turbotable-p-table-does-not-work-properly-with-scrollheight-100)
 
 ![license](https://img.shields.io/npm/l/p-table-responsive-scroll.svg) ![downloads](https://img.shields.io/npm/dt/p-table-responsive-scroll.svg)
 
@@ -23,4 +29,5 @@ use the responsive-scrolling directive in your component:
 ## Versions
 
 use version 9.x with angular Angular 9
+
 use version 8.x with angular Angular 8
